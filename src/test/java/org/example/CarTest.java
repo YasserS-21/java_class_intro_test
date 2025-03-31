@@ -40,7 +40,7 @@ public class CarTest {
     public void testSetYearBoundary() {
         Car car = new Car();
         car.setYear(1800);
-        assertEquals(1886, car.getYear()); 
+        assertEquals(1886, car.getYear());
 
         car.setYear(2024);
         assertEquals(2024, car.getYear());
@@ -50,7 +50,7 @@ public class CarTest {
     public void testSetPriceBoundary() {
         Car car = new Car();
         car.setPrice(-1000.0);
-        assertEquals(0.0, car.getPrice(), 0.0); 
+        assertEquals(0.0, car.getPrice(), 0.0);
 
         car.setPrice(30000.0);
         assertEquals(30000.0, car.getPrice(), 0.0);
@@ -60,8 +60,8 @@ public class CarTest {
     public void testCalculateDepreciation() {
         Car car = new Car("Ford", "Mustang", 2020, 30000.0);
         double depreciatedPrice = car.calculateDepreciation();
-        double expectedDepreciatedPrice = 30000.0 * Math.pow(0.85, 5); 
-        assertEquals(expectedDepreciatedPrice, depreciatedPrice, 0.01); 
+        double expectedDepreciatedPrice = 30000.0 * Math.pow(0.85, 5);
+        assertEquals(expectedDepreciatedPrice, depreciatedPrice, 0.01);
     }
 
     @Test
@@ -76,3 +76,4 @@ public class CarTest {
         car.print();
     }
 }
+
